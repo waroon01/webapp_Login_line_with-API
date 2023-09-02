@@ -3,8 +3,8 @@ const loggedInContainer = document.getElementById("loggedInContainer");
 
 const lineLoginButton = document.getElementById("lineLoginButton");
 
-const clientId = "2000134414"; // Replace with your Line channel's client ID
-const clientSecret = '484dad8bec324be76525854cee859fc9';
+const clientId = "xxxxxxxxxxx"; // Replace with your Line channel's client ID
+const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
 
 
