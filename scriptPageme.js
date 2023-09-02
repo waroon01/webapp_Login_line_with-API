@@ -1,10 +1,10 @@
 const RegisContainer = document.getElementById("RegisContainer");
 const showProfileContainer = document.getElementById("showProfile");
 const revokeTokenButton = document.getElementById("revokeTokenButton");
-const myURL = "http://127.0.0.1:5500"
 
+const myURL = window.location.origin; //"http://127.0.0.1:5500"
 const clientId = "xxxxxxxxxx"; // channel's client ID
-const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxxx';
+const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 // button revoke 
 revokeTokenButton.addEventListener("click", async () => {
@@ -77,7 +77,6 @@ window.addEventListener("load", async (event) => {
   } else {
 
     init()
-
   }
 });
 
@@ -97,9 +96,6 @@ async function verifyToken(accessToken) {
 
 }
 
-
-
-
 function init() {
 
   // Check if redirected from Line Login and storage the access token
@@ -112,7 +108,7 @@ function init() {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: `grant_type=authorization_code&code=${code}&redirect_uri=http://127.0.0.1:5500/pageme.html&client_id=${clientId}&client_secret=${clientSecret}` // Replace with your Line channel's client secret
+      body: `grant_type=authorization_code&code=${code}&redirect_uri=${myURL}&client_id=${clientId}&client_secret=${clientSecret}` // Replace with your Line channel's client secret
     })
       .then(response => response.json())
       .then(data => {
@@ -146,11 +142,8 @@ function parseJwt(token) {
   return JSON.parse(jsonPayload);
 }
 
-
-
 let otp;
 async function addHitoryLogin(user) {
-
   let dateExp = new Date(user.exp * 1000).toLocaleString()
   console.log(dateExp)
 
@@ -175,7 +168,6 @@ async function addHitoryLogin(user) {
   console.log(otp)
   return json
 }
-
 
 async function chkUser(user, accessToken) {
   let dateExp = new Date(user.exp * 1000).toLocaleString()
@@ -272,7 +264,6 @@ async function chkUser(user, accessToken) {
   return rescheck
 }
 
-
 async function addRegister(formdata) {
   if (formdata[0] !== "" && formdata[1] !== "") {
     const URL = "https://script.google.com/macros/s/AKfycbxQqZlvdn9LMimCI4PB6tCic04tdy3sFYpzNEl93HEFRZj57yLHQzJgc59CxQUrERGJ/exec"
@@ -297,7 +288,6 @@ async function addRegister(formdata) {
             showConfirmButton: false,
             timer: 1500
         })
-
       window.open(myURL, '_self')
     }
   } else {
@@ -308,7 +298,6 @@ async function addRegister(formdata) {
     )
     return
   }
-
 }
 
 
