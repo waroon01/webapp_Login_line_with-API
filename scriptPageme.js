@@ -3,8 +3,8 @@ const showProfileContainer = document.getElementById("showProfile");
 const revokeTokenButton = document.getElementById("revokeTokenButton");
 const myURL = "http://127.0.0.1:5500"
 
-const clientId = "2000134414"; // channel's client ID
-const clientSecret = '484dad8bec324be76525854cee859fc9';
+const clientId = "xxxxxxxxxx"; // channel's client ID
+const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxxx';
 
 // button revoke 
 revokeTokenButton.addEventListener("click", async () => {
