@@ -4,7 +4,7 @@ const revokeTokenButton = document.getElementById("revokeTokenButton");
 
 const myURL = window.location.origin; //"http://127.0.0.1:5500"
 const clientId = "xxxxxxxxxx"; // channel's client ID
-const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxxxx';
+const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
 // button revoke 
 revokeTokenButton.addEventListener("click", async () => {
