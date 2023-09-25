@@ -2,7 +2,7 @@ const RegisContainer = document.getElementById("RegisContainer");
 const showProfileContainer = document.getElementById("showProfile");
 const revokeTokenButton = document.getElementById("revokeTokenButton");
 
-const myURL = window.location.origin; //"http://127.0.0.1:5500"
+const myURL = window.location.origin+"/pageme.html" //"http://127.0.0.1:5500"
 const clientId = "xxxxxxxxxx"; // channel's client ID
 const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
