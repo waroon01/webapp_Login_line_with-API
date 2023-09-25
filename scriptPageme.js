@@ -2,7 +2,7 @@ const RegisContainer = document.getElementById("RegisContainer");
 const showProfileContainer = document.getElementById("showProfile");
 const revokeTokenButton = document.getElementById("revokeTokenButton");
 
-const myURL = window.location.origin+"/pageme.html" //"http://127.0.0.1:5500"
+const myURL = window.location.origin //"http://127.0.0.1:5500"
 const clientId = "xxxxxxxxxx"; // channel's client ID
 const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
@@ -108,7 +108,7 @@ function init() {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: `grant_type=authorization_code&code=${code}&redirect_uri=${myURL}&client_id=${clientId}&client_secret=${clientSecret}` // Replace with your Line channel's client secret
+      body: `grant_type=authorization_code&code=${code}&redirect_uri=${myURL}/pageme.html&client_id=${clientId}&client_secret=${clientSecret}` // Replace with your Line channel's client secret
     })
       .then(response => response.json())
       .then(data => {
