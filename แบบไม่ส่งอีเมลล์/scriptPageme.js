@@ -108,7 +108,7 @@ function init() {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: `grant_type=authorization_code&code=${code}&redirect_uri=${myURL}&client_id=${clientId}&client_secret=${clientSecret}` // Replace with your Line channel's client secret
+      body: `grant_type=authorization_code&code=${code}&redirect_uri=${myURL}/pageme.html&client_id=${clientId}&client_secret=${clientSecret}` // Replace with your Line channel's client secret
     })
       .then(response => response.json())
       .then(data => {
